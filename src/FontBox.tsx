@@ -4,7 +4,7 @@ import GoogleFontLoader, { Font } from 'react-google-font-loader'
 import clsx from 'clsx'
 import { Theme, makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
-import { TextAnime } from 'src/components/anime/TextAnime'
+import { TextAnime } from 'src/components/TextAnime'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import TextField from '@material-ui/core/TextField'
 import { ButtonReset, ButtonPause, ButtonPlay } from 'src/components/ControlButton'
@@ -16,7 +16,7 @@ import {
 } from 'src/components/Accordion'
 import MenuItem from '@material-ui/core/MenuItem'
 import { getRandomWord } from 'src/constants/words'
-import { useAnimeControl } from './components/anime/animeControlHook'
+import { useAnimeControl } from './components/TextAnime/animeControlHook'
 import { fonts, getRandomFontIndex } from './constants/fonts'
 
 const bgList = ['#faf3dd', '#b8f2e6', '#ffa69e', '#aed9e0', '#5e6472']
@@ -72,7 +72,12 @@ export const FontBox: FC<Props> = ({ index }) => {
           color="textPrimary"
           style={{ fontFamily: font[0]?.font }}
         >
-          <TextAnime ref={animeControl.ref} config={animeControl.animeEffect.config} word={word} />
+          <TextAnime
+            ref={animeControl.ref}
+            config={animeControl.animeEffect.config}
+            word={word}
+            font={font[0]?.font}
+          />
         </Typography>
       </div>
       <Accordion>
