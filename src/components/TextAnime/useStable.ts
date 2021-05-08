@@ -6,11 +6,13 @@ export const useStable = <T>(value: T): boolean => {
 
   useEffect(() => {
     let timer: NodeJS.Timeout
+
     if (ref.current !== value) {
       setIsStable(false)
       timer = setTimeout(() => setIsStable(true), 500)
+      ref.current = value
     }
-    ref.current = value
+
     return () => clearTimeout(timer)
   }, [value])
 

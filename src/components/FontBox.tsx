@@ -16,11 +16,9 @@ import {
   AccordionDetails,
 } from 'src/components/Accordion'
 import { ButtonReset, ButtonPause, ButtonPlay } from 'src/components/ControlButton'
-import { TextAnime } from 'src/components/TextAnime'
+import { TextAnime, useAnimeControl } from 'src/components/TextAnime'
 import { fonts, getRandomFontIndex } from 'src/constants/fonts'
 import { getRandomWord } from 'src/constants/words'
-
-import { useAnimeControl } from './TextAnime/useAnimeControl'
 
 const bgList = ['#faf3dd', '#b8f2e6', '#ffa69e', '#aed9e0', '#5e6472']
 type StyleProps = {

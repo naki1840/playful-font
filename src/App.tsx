@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography'
 
 import { FontBox } from 'src/components/FontBox'
 import { ButtonRefresh, ButtonGithub, ButtonFont } from 'src/components/HeroButton'
+import { TitleFont } from 'src/components/TitleFont'
 
 const useStyles = makeStyles((theme) => ({
   heroContent: {
@@ -36,9 +37,18 @@ export const App: FC = () => {
         {/* Hero unit */}
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
-            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              Playful Font
-            </Typography>
+            <TitleFont>
+              <Typography
+                component="h1"
+                variant="h2"
+                align="center"
+                color="textPrimary"
+                style={{ fontFamily: 'inherit' }}
+                gutterBottom
+              >
+                Playful Font
+              </Typography>
+            </TitleFont>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
               Playful
               Fontは文字のアニメーションで遊べるサイトです。フォントや文字を自由にカスタマイズできます。
