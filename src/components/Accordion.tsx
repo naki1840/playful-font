@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 
 import MuiAccordion from '@material-ui/core/Accordion'
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails'

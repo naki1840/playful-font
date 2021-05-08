@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import { forwardRef } from 'react'
 
 import Anime from 'react-animejs-wrapper'
 

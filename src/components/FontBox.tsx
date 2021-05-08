@@ -41,7 +41,7 @@ export const FontBox: FC<Props> = ({ index }) => {
 
   const animeControl = useAnimeControl()
 
-  const [fontIndex, setFontIndex] = React.useState<number>(getRandomFontIndex())
+  const [fontIndex, setFontIndex] = useState<number>(getRandomFontIndex())
   const [font, setFont] = useState<Font[]>([])
   const handleChangeFontIndex = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFontIndex(parseInt(event.target.value, 10))
