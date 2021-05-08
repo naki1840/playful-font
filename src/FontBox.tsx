@@ -25,17 +25,10 @@ type StyleProps = {
 }
 const useStyles = makeStyles<Theme, StyleProps>((theme) => ({
   bg: (props) => ({ backgroundColor: bgList[props.index % bgList.length] }),
-  heroContent: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
-  },
-  wra: {},
-  heroButtons: {
-    marginTop: theme.spacing(4),
-  },
-  cardGrid: {
+  main: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
+    overflow: 'hidden',
   },
 }))
 
@@ -64,7 +57,7 @@ export const FontBox: FC<Props> = ({ index }) => {
   return (
     <>
       <GoogleFontLoader fonts={font} subsets={['cyrillic-ext', 'greek']} />
-      <div className={clsx(classes.cardGrid, classes.bg)}>
+      <div className={clsx(classes.main, classes.bg)}>
         <Typography
           component="h3"
           variant="h3"
