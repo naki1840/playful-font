@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 
-export const useStable = (value: string | number): boolean => {
-  const ref = useRef<string | number>()
+export const useStable = <T>(value: T): boolean => {
+  const ref = useRef<T>()
   const [isStable, setIsStable] = useState<boolean>(false)
 
   useEffect(() => {

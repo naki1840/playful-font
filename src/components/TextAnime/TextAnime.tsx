@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react'
 
 import Anime from 'react-animejs-wrapper'
 
-import { AnimeElement } from './animeControlHook'
+import { AnimeElement } from './useAnimeControl'
 import { useStable } from './useStable'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
