@@ -1,23 +1,26 @@
 /* eslint-disable react/no-array-index-key */
 import React, { FC, useEffect, useState } from 'react'
-import GoogleFontLoader, { Font } from 'react-google-font-loader'
-import clsx from 'clsx'
+
+import MenuItem from '@material-ui/core/MenuItem'
 import { Theme, makeStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
-import { TextAnime } from 'src/components/TextAnime'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import TextField from '@material-ui/core/TextField'
-import { ButtonReset, ButtonPause, ButtonPlay } from 'src/components/ControlButton'
+import Typography from '@material-ui/core/Typography'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import clsx from 'clsx'
+import GoogleFontLoader, { Font } from 'react-google-font-loader'
+
 import {
   Accordion,
   AccordionSummaryWrapper,
   AccordionSummary,
   AccordionDetails,
 } from 'src/components/Accordion'
-import MenuItem from '@material-ui/core/MenuItem'
+import { ButtonReset, ButtonPause, ButtonPlay } from 'src/components/ControlButton'
+import { TextAnime } from 'src/components/TextAnime'
+import { fonts, getRandomFontIndex } from 'src/constants/fonts'
 import { getRandomWord } from 'src/constants/words'
-import { useAnimeControl } from './components/TextAnime/animeControlHook'
-import { fonts, getRandomFontIndex } from './constants/fonts'
+
+import { useAnimeControl } from './TextAnime/animeControlHook'
 
 const bgList = ['#faf3dd', '#b8f2e6', '#ffa69e', '#aed9e0', '#5e6472']
 type StyleProps = {

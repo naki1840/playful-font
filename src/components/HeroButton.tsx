@@ -1,9 +1,10 @@
 import React, { FC } from 'react'
-import { withStyles } from '@material-ui/core/styles'
-import RefreshRoundedIcon from '@material-ui/icons/RefreshRounded'
-import GitHubIcon from '@material-ui/icons/GitHub'
-import FontDownloadRoundedIcon from '@material-ui/icons/FontDownloadRounded'
+
 import Button from '@material-ui/core/Button'
+import { withStyles } from '@material-ui/core/styles'
+import FontDownloadRoundedIcon from '@material-ui/icons/FontDownloadRounded'
+import GitHubIcon from '@material-ui/icons/GitHub'
+import RefreshRoundedIcon from '@material-ui/icons/RefreshRounded'
 
 type Props = {
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void

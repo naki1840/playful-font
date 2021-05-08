@@ -1,5 +1,7 @@
 import React, { forwardRef } from 'react'
+
 import Anime from 'react-animejs-wrapper'
+
 import { AnimeElement } from './animeControlHook'
 import { useStable } from './useStable'
 

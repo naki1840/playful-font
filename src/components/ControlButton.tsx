@@ -1,9 +1,10 @@
 import React, { FC } from 'react'
+
+import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core/styles'
-import RotateLeftIcon from '@material-ui/icons/RotateLeft'
 import PauseIcon from '@material-ui/icons/Pause'
 import PlayArrowIcon from '@material-ui/icons/PlayArrow'
-import Button from '@material-ui/core/Button'
+import RotateLeftIcon from '@material-ui/icons/RotateLeft'
 
 const useStyles = makeStyles((theme) => ({
   button: {

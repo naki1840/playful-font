@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+
 import { animeEffects, getRandomAnimeIndex, AnimeEffect } from 'src/constants/animeEffect'
 
 export type AnimeElement = HTMLElement & {
