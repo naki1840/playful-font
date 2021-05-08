@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/playful-font/static/css/main.4a6536ac.chunk.css",
-    "main.js": "/playful-font/static/js/main.191764f6.chunk.js",
-    "main.js.map": "/playful-font/static/js/main.191764f6.chunk.js.map",
+    "main.js": "/playful-font/static/js/main.57934f43.chunk.js",
+    "main.js.map": "/playful-font/static/js/main.57934f43.chunk.js.map",
     "runtime-main.js": "/playful-font/static/js/runtime-main.0c85145c.js",
     "runtime-main.js.map": "/playful-font/static/js/runtime-main.0c85145c.js.map",
     "static/js/2.ff2aba7e.chunk.js": "/playful-font/static/js/2.ff2aba7e.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0c85145c.js",
     "static/js/2.ff2aba7e.chunk.js",
     "static/css/main.4a6536ac.chunk.css",
-    "static/js/main.191764f6.chunk.js"
+    "static/js/main.57934f43.chunk.js"
   ]
 }
