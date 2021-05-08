@@ -4,8 +4,10 @@ import MuiAccordion from '@material-ui/core/Accordion'
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails'
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary'
 import { makeStyles, withStyles } from '@material-ui/core/styles'
+import Typography from '@material-ui/core/Typography'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 
-export const Accordion = withStyles({
+const Accordion = withStyles({
   root: {
     border: 'none',
     boxShadow: 'none',
@@ -28,12 +30,12 @@ const useStyles = makeStyles(() => ({
     height: '10px',
   },
 }))
-export const AccordionSummaryWrapper: FC = ({ children }) => {
+const AccordionSummaryWrapper: FC = ({ children }) => {
   const classes = useStyles()
   return <div className={classes.warapper}>{children}</div>
 }
 
-export const AccordionSummary = withStyles({
+const AccordionSummary = withStyles({
   root: {
     width: '100px',
     backgroundColor: 'rgba(255,255,255,1.0)',
@@ -52,8 +54,19 @@ export const AccordionSummary = withStyles({
   expanded: {},
 })(MuiAccordionSummary)
 
-export const AccordionDetails = withStyles({
+const AccordionDetails = withStyles({
   root: {
     flexDirection: 'column',
   },
 })(MuiAccordionDetails)
+
+export const FontBoxAccordion: FC = ({ children }) => (
+  <Accordion>
+    <AccordionSummaryWrapper>
+      <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content">
+        <Typography>setting</Typography>
+      </AccordionSummary>
+    </AccordionSummaryWrapper>
+    <AccordionDetails>{children}</AccordionDetails>
+  </Accordion>
+)

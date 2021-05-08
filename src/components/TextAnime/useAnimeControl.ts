@@ -1,6 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
-
-import { animeEffects, getRandomAnimeIndex, AnimeEffect } from 'src/constants/animeEffect'
+import { useRef } from 'react'
 
 export type AnimeElement = HTMLElement & {
   restart: () => void
@@ -17,24 +15,11 @@ export const useAnimeControl = () => {
   const pause = () => ref.current?.pause()
   const reverse = () => ref.current?.reverse()
 
-  const [animeIndex, setAnimeIndex] = useState<number>(getRandomAnimeIndex())
-  const [animeEffect, setAnimeEffect] = useState<AnimeEffect>(animeEffects[animeIndex])
-  const handleChangeAnimeIndex = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setAnimeIndex(parseInt(event.target.value, 10))
-  }
-  useEffect(() => {
-    const newAnimeEffect = animeEffects[animeIndex]
-    setAnimeEffect({ ...newAnimeEffect })
-  }, [animeIndex])
-
   return {
     ref,
     restart,
     play,
     pause,
     reverse,
-    animeIndex,
-    animeEffect,
-    handleChangeAnimeIndex,
   }
 }
