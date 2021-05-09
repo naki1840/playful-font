@@ -9,8 +9,21 @@ import RotateLeftIcon from '@material-ui/icons/RotateLeft'
 const useStyles = makeStyles((theme) => ({
   button: {
     marginTop: theme.spacing(2),
-    marginRight: theme.spacing(1),
-    marginLeft: theme.spacing(1),
+    [theme.breakpoints.down('xs')]: {
+      width: '100px',
+      marginRight: theme.spacing(1),
+      marginLeft: theme.spacing(1),
+    },
+    [theme.breakpoints.up(400)]: {
+      width: '150px',
+      marginRight: theme.spacing(1),
+      marginLeft: theme.spacing(1),
+    },
+    [theme.breakpoints.up('sm')]: {
+      width: '200px',
+      marginRight: theme.spacing(3),
+      marginLeft: theme.spacing(3),
+    },
   },
 }))
 
