@@ -1,33 +1,38 @@
-import React, { forwardRef } from 'react'
+import { FC } from 'react'
+
 import Anime from 'react-animejs-wrapper'
-import { AnimeElement } from './animeControlHook'
+
+import { AnimeRef } from './type'
+import { useStable } from './useStable'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type AnimePropsConfig = any
 type Props = {
+  inputRef: AnimeRef
   config: AnimePropsConfig
   word: string
+  font: string
   cascade?: boolean
 }
-// eslint-disable-next-line prefer-arrow-callback
-export const TextAnime = forwardRef<AnimeElement, Props>(function TextAnime(
-  { config, word, cascade = true },
-  ref
-) {
-  if (!word || !config) return null
 
+export const TextAnime: FC<Props> = ({ inputRef, config, word, font, cascade = true }) => {
+  const isStable = useStable(font)
+
+  if (!config) return null
+
+  const newWord = isStable && word ? word : ' '
   /* eslint-disable react/no-array-index-key */
   const dispWord = cascade
-    ? word
+    ? newWord
         .split('')
         .map((el) => (el === ' ' ? '\u00A0' : el))
         .map((el, index) => <div key={index}>{el}</div>)
-    : word
+    : newWord
   /* eslint-enable react/no-array-index-key */
 
   return (
     <Anime
-      ref={ref}
+      ref={inputRef}
       style={{
         display: 'flex',
         flexDirection: 'row',
@@ -38,4 +43,4 @@ export const TextAnime = forwardRef<AnimeElement, Props>(function TextAnime(
       {dispWord}
     </Anime>
   )
-})
+}

@@ -1,13 +1,29 @@
 import React, { FC } from 'react'
+
+import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core/styles'
-import RotateLeftIcon from '@material-ui/icons/RotateLeft'
 import PauseIcon from '@material-ui/icons/Pause'
 import PlayArrowIcon from '@material-ui/icons/PlayArrow'
-import Button from '@material-ui/core/Button'
+import RotateLeftIcon from '@material-ui/icons/RotateLeft'
 
 const useStyles = makeStyles((theme) => ({
   button: {
-    margin: theme.spacing(1),
+    marginTop: theme.spacing(2),
+    [theme.breakpoints.down('xs')]: {
+      width: '100px',
+      marginRight: theme.spacing(1),
+      marginLeft: theme.spacing(1),
+    },
+    [theme.breakpoints.up(400)]: {
+      width: '150px',
+      marginRight: theme.spacing(1),
+      marginLeft: theme.spacing(1),
+    },
+    [theme.breakpoints.up('sm')]: {
+      width: '200px',
+      marginRight: theme.spacing(3),
+      marginLeft: theme.spacing(3),
+    },
   },
 }))
 
