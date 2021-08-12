@@ -20,7 +20,7 @@ const bgList = ['#faf3dd', '#b8f2e6', '#ffa69e', '#aed9e0', '#5e6472']
 type StyleProps = {
   index: number
 }
-const useStyles = makeStyles<Theme, StyleProps>((theme) => ({
+const useStyles = makeStyles<Theme, StyleProps>(() => ({
   bg: (props) => ({ backgroundColor: bgList[props.index % bgList.length] }),
   main: {
     overflow: 'hidden',
