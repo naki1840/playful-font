@@ -70,6 +70,11 @@ export const FontBoxForm: FC<Props> = ({ inputRef }) => {
   const [isPlaying, setIsPlaying] = useState(true)
   const animeControl = getAnimeControl(inputRef)
 
+  const handleReset = () => {
+    animeControl.restart()
+    setIsPlaying(true)
+  }
+
   const handlePause = () => {
     animeControl.pause()
     setIsPlaying(false)
@@ -84,7 +89,7 @@ export const FontBoxForm: FC<Props> = ({ inputRef }) => {
     <Grid container direction="row" justify="center" alignItems="center" spacing={3}>
       <Grid item xs={12} sm={12} md={12}>
         <Box textAlign="center">
-          <ButtonReset onClick={animeControl.restart} />
+          <ButtonReset onClick={handleReset} />
           {isPlaying ? <ButtonPause onClick={handlePause} /> : <ButtonPlay onClick={handlePlay} />}
         </Box>
       </Grid>
